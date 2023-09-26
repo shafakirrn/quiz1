@@ -22,7 +22,7 @@ body {
   width: 95%;
   height: 100vh;
   background-size: cover;
-  background-position: right;
+  background-position: center;
 }
 .container {
   padding: 10px 3%;
