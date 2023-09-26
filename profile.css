@@ -1,0 +1,137 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-position-x: center;
+  background: #080808;
+  color: #fff;
+  background-image: url(images/galaxy.jpg);
+}
+.container {
+  padding: 10px 5%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: lightsalmon;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+.logo {
+  width: 100px;
+}
+
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Profile-col-1 {
+  flex-basis: 35%;
+}
+
+.Profile-col-1 img {
+  width: 75%;
+  border-radius: 50%;
+}
+.Profile-col-2 {
+  flex-basis: 65%;
+}
+
+.sub-title {
+  font-size: 60 px;
+  color: #fff;
+}
+
+.sub-title span {
+  color: #b54769;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 10px 0 20px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: pink;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-links.active-link {
+  color: #b54769;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 18px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}

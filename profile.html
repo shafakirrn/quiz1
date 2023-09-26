@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav class="nav-bar">
+          <a href="index.html">
+            <img src="images/shafalogo2.png" class="logo" alt= "index.html">
+          </a>          
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="profile.html" class="nav-link">Profile</a>
+            </li>
+            <li><a href="hometown.html">Hometown</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="tourist.html">Tourist</a></li>
+          </ul>
+        </nav>
+    <div id="Profile">
+      <div class="container">
+        <div class="row">
+          <div class="Profile-col-1">
+            <img src="images/formal.jpg" />
+          </div>
+          <div class="Profile-col-2">
+            <h1 class="sub-title"><span>Profile</span></h1>
+            
+            <p>
+              Hi, I am Shafa Kirana Mulia! You can call me Shafa. <br />
+              I am a second-year undergraduate student in the Informatics
+              Department of Institut Teknologi Sepuluh Nopember with a high
+              interest about technology. I also have the interest of managing an
+              event and working in an organization to increase my social skills
+              and build relations.
+            </p>
+            <br>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                <span>Skills</span>
+              </p>
+              <p class="tab-links" onclick="opentab('education')">
+                <span>Education</span>
+              </p>
+
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>Communication and public speaking</li>
+                <li>Teamwork and leadership</li>
+                <li>C, C++, HTML, CSS and JavaScript</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>Institut Teknologi Sepuluh Nopember</span><br />2022-Now</li>
+                <li><span>SMAT Krida Nusantara</span><br />2019-2022</li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
